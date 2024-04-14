@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Patient Dashboard</title>
+    <link rel="stylesheet" href="style2.css">
+</head>
+<body>
+    <header>
+        <h1>Hospital Patient Dashboard</h1>
+    </header>
+    <main>
+        <div id="search-form">
+            <label for="patient-id">Search Patient by ID:</label>
+            <input type="tel" id="patient-id" name="patient-id" required >
+            <button id="search-button" onclick="searchPatientById()">Search</button>
+        </div>
+        <section id="patient-dashboard">
+            <h2>Patient List</h2>
+            <div class="dashboard-controls">
+                <label for="filter-select">Show:</label>
+                <select id="filter-select">
+                    <option value="all">All Patients</option>
+                    <option value="active">Active Patients</option>
+                    <option value="old">Old Patients</option>
+                </select>
+            </div>
+            <table id="patient-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Blood Group</th>
+                        <th>Date of Joining</th>
+                        <th>Disease</th>
+                        <th>Department</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="patient-list">
+                    <!-- Patient data rows will be dynamically added here -->
+                </tbody>
+            </table>
+            
+            <div id="search-message"></div>
+        </section>
+    </main>
+    <script src="script2.js"></script>
+</body>
+</html>

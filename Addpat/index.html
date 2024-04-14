@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Patient Details
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+   
+    <h1>
+        <button><a href="C:\Users\Sai santosh\Documents\HospitalManagementsprint1-main\HospitalManagementsprint1-main\Admin.html" style="color: aliceblue;">Back to Admin</a></button>
+        <center id="dh" style="margin-left: 50px;font-size:larger;font-weight: 300;">DOCTERY HOSPITAL </center>
+        <center style="margin-left: 50px;">Patient Details</center>
+    </h1>
+    <hr>
+    <div class="body">
+    <div class="employee-form">
+        <form  id="patientForm" onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+            <div>
+                <label>PatientID</label>
+                    <input type="text"  class="input" id="randomNumberInput" name="randomNumberInput" >
+            </div>
+            <div>
+                <label>Full Name*</label><label class="validation-error " id="fullNameValidationError" >This field is
+                    required.</label>
+                <input type="text" class="input" name="fullName" id="fullName" required>
+            </div>
+            <div>
+                <label>Date of Birth</label><br>
+                <input type="date" class="input" name="dob" id="dob" style="width: 100%;height: 35px;margin-top: 8px;border-radius: 5px;border-color:azure;" required>
+            </div>
+            <div>
+                <label>Gender</label>
+                <!-- <p id="error"></p> -->
+                <select name="gend" id="gend" >
+                    <option value="select" ></option>
+                    <option value="Male">M</option>
+                    <option value="Female">F</option>
+                    <option value="Others">Others</option>
+                </select>
+            </div>
+            <div>
+                <label>Adress for Communication</label>
+                <input type="text" class="input" name="addres" id="addres" required>
+            </div>
+            <div>
+                <label>Contact Information</label>
+                <input type="number" class="input" name="phn" id="phn" required>
+            </div>
+            <div>
+                <label>Date of Admission</label>
+                <input type="date" class="input" name="doa" id="doa"style="width: 100%;height: 35px;margin-top: 8px;border-radius: 5px;border-color:azure;" required>
+            </div>
+            <div>
+                <label for="Specalist">Specialist</label>
+                <select name="Specalist" id="Specalist" required>
+                    <option value="select">select</option>
+                    <option value="Orthopedist">Orthopedist</option>
+                    <option value="Cardiologist">Cardiologist</option>
+                    <option value="Dermatologist">Dermatologist</option>
+                    <option value="Neurologist">Neurologist</option>
+                    <option value="Ophthalmologist">Ophthalmologist</option>
+                    <option value="Pediatrician">Pediatrician</option>
+                    <option value="Psychiatrist">Psychiatrist</option>
+                    <option value="Endocrinologist">Endocrinologist</option>
+                    <option value="Gynecologist">Gynecologist</option>
+                    <option value="Urologist">Urologist</option>
+                </select>
+            </div>
+            
+            <div>
+                <label>Billing Details</label required>
+                <input type="text" class="input"  name="Bdetails" id="Bdetails" required>
+            </div>
+            <div>
+                <label>Any Other Information</label>
+                <input type="text" class="input"  name="Information" id="Information" required>
+            </div>
+            <div class="form-action-buttons">
+                <input type="submit" class="input" value="submit" >
+            </div>
+        </form>
+    </div>
+</div>
+    <div id="successMessage" class="success-message hide">Data successfully inserted!</div> 
+    <div id="deleteMessage" class="success-message hide" style="color: red;">Data successfully Deleted!</div>
+    <br />
+    <div class="employees-table">
+        <table class="list" id="employeeList">
+            <thead>
+                <tr>
+                    
+                    <th>Full Name</th>
+                    <th>Date of Birth</th>
+                    <th>Gender</th>
+                    <th>Adress</th>
+                    <th>Contact Information</th>
+                    <th>Date of Admission</th>
+                    <th>Specalist</th>
+                    <th>Billing Details</th>
+                    <th>PatientID</th>
+                    <th>Modify</th>
+                    
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+    </div>
+    <script src="script.js"></script>
+    <script>
+        function PatientID() {
+          return Math.floor(Math.random() * 1000000); 
+        }
+    
+        window.onload = function() {
+    var form = document.getElementById('patientForm');
+    var successMessage = document.getElementById('successMessage');
+    console.log("hiiii");
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
+        setTimeout(function() {
+            successMessage.classList.remove('hide');
+            form.reset();
+            setTimeout(function() {
+                successMessage.classList.add('hide');
+            }, 6000);
+        }, 1000); 
+    });
+};
+
+        
+      </script>
+</body>
+
+</html>

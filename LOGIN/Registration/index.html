@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN PAGE</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="login">
+        <h1>ENTER AS ADMIN</h1>
+    </div>
+    <div class="login-container">
+        <form action="" id="registrationForm" onsubmit="return validateForm()">
+            <div>
+                <label for="applicantName">APPLICANT NAME</label>
+                <br>
+                <input type="text" id="applicantName" name="applicantName" placeholder="Enter your Name" required>
+            </div>
+            <div>
+                <label for="dob">DATE OF BIRTH</label>
+                <br>
+                <input type="date" id="dob" name="dob" placeholder="Enter DOB" required>
+            </div>
+            <div>
+                <label for="bloodGroup">BLOOD GROUP</label>
+                <br>
+                <input type="text" id="bloodGroup" name="bloodGroup" placeholder="Enter Blood Group" required>
+            </div>
+            <div>
+                <label for="address">ADDRESS</label>
+                <br>
+                <input type="text" id="address" name="address" placeholder="Enter Address" required>
+            </div>
+            <div>
+                <label for="fathersName">FATHER'S NAME</label>
+                <br>
+                <input type="text" id="fathersName" name="fathersName" placeholder="Enter Father's Name" required>
+            </div>
+            <div>
+                <label for="mothersName">MOTHER'S NAME</label>
+                <br>
+                <input type="text" id="mothersName" name="mothersName" placeholder="Enter Mother's Name" required>
+            </div>
+            <div>
+                <label for="contactNumber">CONTACT NUMBER</label>
+                <br>
+                <input type="text" id="contactNumber" name="contactNumber" placeholder="Enter Contact Number" required>
+            </div>
+            <div>
+                <label for="email">Email-Id</label>
+                <br>
+                <input type="text" id="email" name="email" placeholder="Enter Email Address" required>
+            </div>
+            <div>
+                <label for="password">Password</label>
+                <br>
+                <input type="password" id="password" name="password" placeholder="Enter Password" required>
+            </div>
+            <div>
+                <label for="confirmPassword">Confirm Password</label>
+                <br>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" required>
+            </div>
+            <button type="submit">SUBMIT</button>
+        </form>
+    </div>
+
+    <script src="script3.js"></script>
+</body>
+</html>
